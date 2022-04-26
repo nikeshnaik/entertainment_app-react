@@ -1,0 +1,28 @@
+.container {
+    width: 9.6rem;
+    height: 96rem;
+    position: fixed;
+    background-color: var(--semi-dark-blue);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 4rem;
+}
+
+.logo {
+    margin-top: 3.541rem;
+    margin-bottom: 7.5rem;
+}
+
+.icon {
+    background-color: var(--semi-dark-blue);
+    border: none;
+    width: 2rem;
+    height: 2rem;
+}
+
+.active_category>svg>path {
+    fill: white;
+}

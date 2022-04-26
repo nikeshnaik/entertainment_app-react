@@ -21,3 +21,7 @@ html {
   --pure-white: #FFFFFF;
 
 }
+
+body {
+  background-color: var(--dark-blue);
+}
