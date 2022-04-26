@@ -1,0 +1,94 @@
+{
+  "main": {
+    "id": "8ced4d473a8e06cb",
+    "type": "split",
+    "children": [
+      {
+        "id": "02ec506a7f831c97",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4ee875fc7044ac29",
+    "type": "split",
+    "children": [
+      {
+        "id": "c3753f2ca15ec33b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e3743b09e05806ce",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "f39da460a4c4d713",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "91e3232a4189dd37",
+    "type": "split",
+    "children": [
+      {
+        "id": "e7b05c3476527f3c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e305cbf6bfd73b52",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "02ec506a7f831c97",
+  "lastOpenFiles": [
+    "Component Tree.md",
+    "Backend Data And State Management.md",
+    "Entertainment_App_Components.svg",
+    "Untitled.md",
+    "HTML CSS.md",
+    "Frontend.md"
+  ]
+}
