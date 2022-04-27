@@ -6,7 +6,6 @@ import Navbar from './navbar'
 import { store } from '../..//app/store';
 import { Provider } from 'react-redux'
 
-
 test('renders content', () => {
 
     render(<Provider store={store}> <Navbar /> </Provider>)
@@ -40,13 +39,16 @@ test('active on click', async () => {
 })
 
 
-test('global page update', async () => {
+// test('global page update', async () => {
 
-    const mockHandler = jest.fn()
+//     const mockHandler = jest.fn()
 
-    render(<Provider store={store}> <Navbar /> </Provider>)
+//     render(<Provider store={store}> <Navbar /> </Provider>)
 
-    const user = userEvent.setup()
-    const MovieButton = screen.getByTitle("Movies")
-    await user.click(MovieButton)
-})
+//     const user = userEvent.setup()
+//     const MovieButton = screen.getByTitle("Movies")
+//     await user.click(MovieButton)
+
+
+// })
+

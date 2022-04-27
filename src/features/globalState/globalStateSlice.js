@@ -43,8 +43,9 @@ const globalStateSlice = createSlice({
 export const { setLogin, setUserInfo, setCurrentPage, setSearchTextFilter } = globalStateSlice.actions;
 
 
-export const selectUserInfo = (state) => state.user
-export const selectCurrentPage = (state) => state.page
+export const selectUserInfo = (state) => state.entertainment_app.user
+export const selectCurrentPage = (state) => state.entertainment_app.pageMapping[state.entertainment_app.pageId]
+export const selectSearchFilterText = (state) => state.entertainment_app.searchText
 
 
 export default globalStateSlice.reducer;

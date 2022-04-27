@@ -1,0 +1,10 @@
+.container {
+
+    background-color: var(--dark-blue);
+    position: relative;
+    margin-left: 13.2rem;
+    width: inherit;
+    height: 100vh;
+    max-height: max-content;
+    overflow: auto;
+}
