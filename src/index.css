@@ -16,7 +16,7 @@ html {
 :root {
   --red: #FC4747;
   --dark-blue: #10141E;
-  --greyish-blue: #5A698F;
+  --greyish-blue: 90, 105, 143;
   --semi-dark-blue: #161D2F;
   --pure-white: #FFFFFF;
 

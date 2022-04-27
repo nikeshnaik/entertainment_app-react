@@ -1,0 +1,8 @@
+.container {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    background-color: rgba(var(--greyish-blue), 0.2);
+    display: grid;
+    place-content: center;
+}
