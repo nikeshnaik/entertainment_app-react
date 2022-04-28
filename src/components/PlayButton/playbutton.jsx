@@ -2,9 +2,9 @@ import styles from "./playbutton.module.css"
 import { ReactComponent as PlayIcon } from "../../assets/icon-play.svg"
 
 
-function PlayButton(isHover) {
+function PlayButton(props) {
 
-    if (isHover) {
+    if (props.isHover) {
         return (
 
             <div className={styles.container}>
