@@ -29,5 +29,5 @@
     outline: none;
     border-bottom: 0.1rem solid var(--pure-white);
     caret-color: var(--red);
-
+    text-transform: capitalize;
 }
