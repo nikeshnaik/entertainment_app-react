@@ -28,7 +28,7 @@
     color: var(--pure-white);
 
     mix-blend-mode: normal;
-    opacity: 0.75;
+    opacity: 0.9;
 }
 
 .show_details_small {
@@ -45,9 +45,10 @@
 
     color: var(--pure-white);
 
-    mix-blend-mode: normal;
-    opacity: 0.75;
+    mix-blend-mode: norm;
+    opacity: 0.9;
 }
+
 
 #title_large {
 
@@ -56,6 +57,8 @@
     font-weight: 500;
     font-size: 2.4rem;
     line-height: 3rem;
+
+    mix-blend-mode: normal;
 
     color: var(--pure-white)
 }
@@ -68,5 +71,6 @@
     font-size: 1.8rem;
     line-height: 2.68rem;
 
+    mix-blend-mode: normal;
     color: var(--pure-white)
 }

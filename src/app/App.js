@@ -6,6 +6,7 @@ import PlayButton from '../components/PlayButton/playbutton';
 import SearchBox from '../components/SearchBox/searchBox';
 import ShowDescription from '../components/ShowDescription/showdescription';
 import ShowTile from '../components/ShowTile/showtile';
+import TrendingRow from '../components/TrendingRow/trendingRow';
 import Home from '../pages/Home/home';
 
 
@@ -43,7 +44,13 @@ function App() {
         <PlayButton />
         <ShowDescription isTrending={true} yearOfRelease='2020' category="Movie" rating='PG' title="Beyond Earth" /> */}
 
-        <ShowTile showDetails></ShowTile>
+        <TrendingRow>
+          <ShowTile showDetails></ShowTile>
+          <ShowTile showDetails></ShowTile>
+          <ShowTile showDetails></ShowTile>
+          <ShowTile showDetails></ShowTile>
+        </TrendingRow>
+
       </Home>
     </Layout>
   );
