@@ -1,7 +1,12 @@
+import styles from "./layout.module.css"
+
 function Layout(props) {
     return (
 
-        <>{props.children}</>
+        <div className={styles.container}>
+            {props.children}
+        </div>
+
     )
 }
 

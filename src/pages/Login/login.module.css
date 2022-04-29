@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7.81rem;
+    flex-direction: column;
+}
+
+.container>svg {
+    transform: scale(2);
+}
+
+
+.loginform {
+    width: 40rem;
+    height: 37.3rem;
+    background-color: var(--semi-dark-blue);
+    margin-top: 8.399rem;
+    border-radius: 2rem;
+}
+
+#formtitle {
+
+    padding-left: 3.2rem;
+    padding-top: 3.2rem;
+    color: var(--pure-white);
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    letter-spacing: -0.05rem;
+
+}

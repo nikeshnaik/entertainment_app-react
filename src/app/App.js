@@ -9,6 +9,7 @@ import ShowDescription from '../components/ShowDescription/showdescription';
 import ShowTile from '../components/ShowTile/showtile';
 import TrendingRow from '../components/TrendingRow/trendingRow';
 import Home from '../pages/Home/home';
+import Login from '../pages/Login/login';
 
 
 
@@ -57,50 +58,47 @@ function App() {
   }
 
   return (
-    <Layout>
-      <Navbar />
-      <Home>
-        <SearchBox />
 
-        {/* <BookMark />
-        <PlayButton />
-        <ShowDescription isTrending={true} yearOfRelease='2020' category="Movie" rating='PG' title="Beyond Earth" /> */}
+    // <Home>
+    //   <Navbar />
+    //   <Layout>
+    //     <SearchBox />
+    //     <TrendingRow>
+    //       <ShowTile data={showDetails}></ShowTile>
+    //       <ShowTile data={showDetails}></ShowTile>
+    //       <ShowTile data={showDetails}></ShowTile>
+    //       <ShowTile data={showDetails}></ShowTile>
+    //       <ShowTile data={showDetails}></ShowTile>
+    //     </TrendingRow>
 
-        <TrendingRow>
-          <ShowTile data={showDetails}></ShowTile>
-          <ShowTile data={showDetails}></ShowTile>
-          <ShowTile data={showDetails}></ShowTile>
-          <ShowTile data={showDetails}></ShowTile>
-          <ShowTile data={showDetails}></ShowTile>
-        </TrendingRow>
+    //     <GridLayout>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //       <ShowTile data={showDetailsRegular}></ShowTile>
+    //     </GridLayout>
+    //   </Layout >
+    // </Home>
 
-        <GridLayout>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-          <ShowTile data={showDetailsRegular}></ShowTile>
-        </GridLayout>
-
-      </Home>
-    </Layout>
+    <Login></Login>
   );
 }
 
