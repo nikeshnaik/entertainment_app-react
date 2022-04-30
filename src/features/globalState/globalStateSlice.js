@@ -19,8 +19,8 @@ const globalStateSlice = createSlice({
     initialState,
     reducers: {
 
-        setLogin: (state) => {
-            state.login = false
+        setLogin: (state, action) => {
+            state.login = action.payload
         },
 
         setUserInfo: (state, action) => {

@@ -21,8 +21,8 @@
 
 #formtitle {
 
-    padding-left: 3.2rem;
-    padding-top: 3.2rem;
+    margin-left: 3.2rem;
+    margin-top: 3.2rem;
     color: var(--pure-white);
     font-family: 'Outfit';
     font-style: normal;
@@ -32,3 +32,114 @@
     letter-spacing: -0.05rem;
 
 }
+
+.form {
+    margin-top: 4rem;
+    margin-left: 3.2rem;
+    margin-right: 3.2rem;
+    color: var(--pure-white);
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+}
+
+input {
+    background-color: var(--semi-dark-blue);
+    color: var(--greyish-blue);
+    border: none;
+    outline: none;
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    width: 33.6rem;
+
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+
+    padding: 0 0 1.8rem 1.6rem;
+}
+
+input:focus {
+    color: white;
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    opacity: 1;
+    caret-color: var(--red);
+}
+
+
+.form>button {
+    margin-top: 2rem;
+    height: 4.8rem;
+    width: inherit;
+    background-color: var(--red);
+    color: var(--pure-white);
+    border: none;
+    outline: none;
+
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    border-radius: 0.6rem;
+}
+
+.form>button:active {
+    background-color: var(--pure-white);
+    color: black;
+    transition: 0.2s;
+}
+
+.loginform>h3 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    color: var(--pure-white);
+    text-align: center;
+    margin-top: 2.4rem;
+
+}
+
+.loginform>h3>span {
+    color: var(--red);
+    padding: 0 0.9rem 0 0.9rem;
+}
+
+.passwordField {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    outline: none;
+    border-bottom-width: 0.01rem;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+.passwordField:focus {
+    border-bottom-width: 0.01rem;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    color: var(--pure-white);
+    caret-color: var(--red);
+}
+
+.warningPassword>.warningtext {
+    white-space: nowrap;
+    color: rgba(251, 71, 71, 1);
+    padding: 0 0 1.8rem 1.6rem;
+}
+
+.warningPassword {
+    border-bottom-color: rgba(251, 71, 71, 1);
+}
+
+/* Check something is off with css speicificty */
