@@ -43,6 +43,12 @@
     row-gap: 2.4rem;
 }
 
+.emailField {
+    display: flex;
+    flex-direction: row;
+
+}
+
 .emailField>input {
     background-color: var(--semi-dark-blue);
     color: var(--greyish-blue);
