@@ -32,7 +32,7 @@ function Login(props) {
 
     }
 
-    let passwordWarningIDStyle = passwordWarning ? styles.warningPassword : null
+    let passwordWarningClass = passwordWarning ? `${styles.warningPassword} ${styles.passwordField}` : `${styles.passwordField}`
 
     return (
         <div className={styles.container}>
@@ -41,12 +41,14 @@ function Login(props) {
                 <h2 id={styles.formtitle}>Login</h2>
 
                 <form onSubmit={handleLogin} className={styles.form}>
-                    <input type="text" value={userName} name="Username" placeholder="Email address"
-                        onChange={({ target }) => setUsername(target.value)} />
+                    <div className={styles.emailField}>
+                        <input type="text" value={userName} name="Username" placeholder="Email address"
+                            onChange={({ target }) => setUsername(target.value)} />
+                    </div>
 
-                    <div className={styles.passwordField} id={passwordWarningIDStyle}>
+                    <div className={passwordWarningClass} >
                         <input type="password" value={password} name="Password" placeholder="Password"
-                            onChange={({ target }) => setPassword(target.value)} id={passwordWarningIDStyle} />
+                            onChange={({ target }) => setPassword(target.value)} />
 
                         {passwordWarning ? <span className={styles.warningtext}>Can't be empty</span> : null}
                     </div>

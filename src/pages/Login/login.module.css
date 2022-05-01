@@ -43,7 +43,7 @@
     row-gap: 2.4rem;
 }
 
-input {
+.emailField>input {
     background-color: var(--semi-dark-blue);
     color: var(--greyish-blue);
     border: none;
@@ -64,7 +64,7 @@ input {
     padding: 0 0 1.8rem 1.6rem;
 }
 
-input:focus {
+.emailField>input:focus {
     color: white;
     border-bottom-width: 0.1rem;
     border-bottom-style: solid;
@@ -117,29 +117,63 @@ input:focus {
 .passwordField {
     display: flex;
     flex-direction: row;
-    border: none;
-    outline: none;
-    border-bottom-width: 0.01rem;
-    border-bottom-style: solid;
-    border-bottom-color: rgba(255, 255, 255, 0.5);
+
 }
 
-.passwordField:focus {
-    border-bottom-width: 0.01rem;
+.passwordField>input {
+    background-color: var(--semi-dark-blue);
+    color: var(--greyish-blue);
+    border: none;
+    outline: none;
+    border-bottom-width: 0.1rem;
     border-bottom-style: solid;
     border-bottom-color: white;
-    color: var(--pure-white);
+    width: 33.6rem;
+
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+
+    padding: 0 0 1.8rem 1.6rem;
+
+}
+
+.passwordField>input:focus {
+    color: white;
+    outline: none;
+    border: none;
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    opacity: 1;
     caret-color: var(--red);
 }
 
-.warningPassword>.warningtext {
+.warningtext {
     white-space: nowrap;
-    color: rgba(251, 71, 71, 1);
+    opacity: 1;
+    color: var(--red);
     padding: 0 0 1.8rem 1.6rem;
+    border-bottom-color: var(--red);
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid;
+
 }
 
-.warningPassword {
-    border-bottom-color: rgba(251, 71, 71, 1);
+.warningPassword>input {
+    opacity: 1;
+    border-bottom-color: var(--red);
+    color: var(--red);
+}
+
+.warningPassword>input:focus {
+    opacity: 1;
+    border-bottom-color: var(--red);
+    color: var(--red);
 }
 
 /* Check something is off with css speicificty */
