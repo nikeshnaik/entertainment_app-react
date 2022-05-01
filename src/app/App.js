@@ -10,6 +10,7 @@ import ShowTile from '../components/ShowTile/showtile';
 import TrendingRow from '../components/TrendingRow/trendingRow';
 import Home from '../pages/Home/home';
 import Login from '../pages/Login/login';
+import SignUp from '../pages/SignUp/signup';
 
 
 
@@ -98,7 +99,8 @@ function App() {
     //   </Layout >
     // </Home>
 
-    <Login></Login>
+    // <Login></Login>
+    <SignUp></SignUp>
   );
 }
 

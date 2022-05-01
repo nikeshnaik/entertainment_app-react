@@ -11,9 +11,9 @@
 }
 
 
-.loginform {
+.signupform {
     width: 40rem;
-    height: 37.3rem;
+    height: 41rem;
     background-color: var(--semi-dark-blue);
     margin-top: 8.399rem;
     border-radius: 2rem;
@@ -81,7 +81,6 @@
 
 
 .form>button {
-    margin-top: 2rem;
     height: 4.8rem;
     width: inherit;
     background-color: var(--red);
@@ -95,7 +94,7 @@
     font-size: 1.5rem;
     line-height: 1.9rem;
     border-radius: 0.6rem;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .form>button:active {
@@ -104,7 +103,7 @@
     transition: 0.2s;
 }
 
-.loginform>h3 {
+.signupform>h3 {
     font-family: 'Outfit';
     font-style: normal;
     font-weight: 300;
@@ -116,10 +115,10 @@
 
 }
 
-.loginform>h3>a {
-    text-decoration: none;
+.signupform>h3>a {
     color: var(--red);
     padding: 0 0.9rem 0 0.9rem;
+    text-decoration: none;
 }
 
 .passwordField {
@@ -151,6 +150,46 @@
 }
 
 .passwordField>input:focus {
+    color: white;
+    outline: none;
+    border: none;
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    opacity: 1;
+    caret-color: var(--red);
+}
+
+
+.repeatPasswordField {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.repeatPasswordField>input {
+    background-color: var(--semi-dark-blue);
+    color: var(--greyish-blue);
+    border: none;
+    outline: none;
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    width: 33.6rem;
+
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+
+    padding: 0 0 1.8rem 1.6rem;
+
+}
+
+.repeatPasswordField>input:focus {
     color: white;
     outline: none;
     border: none;
