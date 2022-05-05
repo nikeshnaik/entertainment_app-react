@@ -8,7 +8,7 @@ import styles from "./navbar.module.css"
 import { useState } from 'react'
 import { setCurrentPage } from '../../features/globalState/globalStateSlice'
 import { useDispatch } from 'react-redux'
-
+import { Link } from 'react-router-dom'
 
 
 function Navbar() {

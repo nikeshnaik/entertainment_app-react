@@ -9,7 +9,6 @@ function ImageWrapper(props) {
 
     let srcSetValue = [smallSrcImage, mediumSrcImage, largeSrcImage].filter(item => item !== null).join(",")
 
-    console.log(props, srcSetValue)
 
     return (
         <img src={props.smallSrcImage} alt="image" className={styles.imageContainer}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import BookMark from '../components/BookMark/bookMark';
 import GridLayout from '../components/GridLayout/gridlayout';
 import Layout from '../components/Layout/layout';
@@ -16,91 +17,30 @@ import SignUp from '../pages/SignUp/signup';
 
 function App() {
 
-  let showDetails = {
-
-    "title": "Beyond Earth",
-    "thumbnail": {
-      "trending": {
-        "small": "./assets/thumbnails/beyond-earth/trending/small.jpg",
-        "large": "./assets/thumbnails/beyond-earth/trending/large.jpg"
-      },
-      "regular": {
-        "small": "./assets/thumbnails/beyond-earth/regular/small.jpg",
-        "medium": "./assets/thumbnails/beyond-earth/regular/medium.jpg",
-        "large": "./assets/thumbnails/beyond-earth/regular/large.jpg"
-      }
-    },
-    "year": 2019,
-    "category": "Movie",
-    "rating": "PG",
-    "isBookmarked": false,
-    "isTrending": true
-  }
-
-  let showDetailsRegular = {
-
-    "title": "Beyond Earth",
-    "thumbnail": {
-      "trending": {
-        "small": "./assets/thumbnails/beyond-earth/trending/small.jpg",
-        "large": "./assets/thumbnails/beyond-earth/trending/large.jpg"
-      },
-      "regular": {
-        "small": "./assets/thumbnails/beyond-earth/regular/small.jpg",
-        "medium": "./assets/thumbnails/beyond-earth/regular/medium.jpg",
-        "large": "./assets/thumbnails/beyond-earth/regular/large.jpg"
-      }
-    },
-    "year": 2019,
-    "category": "Movie",
-    "rating": "PG",
-    "isBookmarked": false,
-    "isTrending": false
-  }
 
   return (
 
-    // <Home>
-    //   <Navbar />
-    //   <Layout>
-    //     <SearchBox />
-    //     <TrendingRow>
-    //       <ShowTile data={showDetails}></ShowTile>
-    //       <ShowTile data={showDetails}></ShowTile>
-    //       <ShowTile data={showDetails}></ShowTile>
-    //       <ShowTile data={showDetails}></ShowTile>
-    //       <ShowTile data={showDetails}></ShowTile>
-    //     </TrendingRow>
+    <Routes path="/">
 
-    //     <GridLayout>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //       <ShowTile data={showDetailsRegular}></ShowTile>
-    //     </GridLayout>
-    //   </Layout >
-    // </Home>
+      <Route path="" element={<Home />} />
 
-    // <Login></Login>
-    <SignUp></SignUp>
+      <Route path="login" element={<Login />} />
+
+      <Route path="signup" element={<SignUp />} />
+
+      <Route path="*" element={
+        <main style={{
+          padding: "1rem",
+          color: 'white',
+          display: "grid",
+          placeItems: "center"
+        }}>
+          <h1> There's nothing here</h1>
+        </main>
+      } />
+
+    </Routes >
+
   );
 }
 

@@ -2,38 +2,33 @@ import styles from "./login.module.css";
 import { ReactComponent as WebAppIcon } from '../../assets/logo.svg'
 import { useDispatch } from "react-redux";
 import { setUserInfo } from "../../features/globalState/globalStateSlice";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 
 function Login(props) {
 
-    const [userName, setUsername] = useState('')
+    const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
     const [passwordWarning, setPasswordWarning] = useState(false)
 
+    const [emailWarning, setEmailWarning] = useState(false)
+
+    const navigate = useNavigate()
+
     const dispatch = useDispatch(setUserInfo)
 
+
     const handleLogin = (event) => {
+
         event.preventDefault()
-        console.log('Logging in with', userName, password)
-
-        // User Administartion yet to be done
-
-        let user = {
-            userName: userName,
-            image: '../assets/image-avatar.png',
-            name: 'John Doe',
-            password: password
-        }
-
-        dispatch(setUserInfo, user)
-        setPasswordWarning(!passwordWarning)
+        event.stopPropagation()
 
     }
 
     let passwordWarningClass = passwordWarning ? `${styles.warningPassword} ${styles.passwordField}` : `${styles.passwordField}`
-    let emailWarningClass = passwordWarning ? `${styles.warningPassword} ${styles.emailField}` : `${styles.emailField}`
+    let emailWarningClass = emailWarning ? `${styles.warningPassword} ${styles.emailField}` : `${styles.emailField}`
 
     return (
         <div className={styles.container}>
@@ -43,8 +38,8 @@ function Login(props) {
 
                 <form onSubmit={handleLogin} className={styles.form}>
                     <div className={emailWarningClass}>
-                        <input type="text" value={userName} name="Username" placeholder="Email address"
-                            onChange={({ target }) => setUsername(target.value)} />
+                        <input type="text" value={email} name="Email" placeholder="Email address"
+                            onChange={({ target }) => setEmail(target.value)} />
 
                         {passwordWarning ? <span className={styles.warningtext}>InValid</span> : null}
                     </div>
@@ -59,7 +54,7 @@ function Login(props) {
 
                     <button type="submit">Login to your account</button>
                 </form>
-                <h3>Don't have an account?<a href="sign_up">Sign Up</a></h3>
+                <h3>Don't have an account?<Link to="/sign_up">Sign Up</Link></h3>
             </div >
         </div >
     )
