@@ -26,7 +26,7 @@ function ShowTile(props) {
 
                 <ImageWrapper smallSrcImage={props.data.thumbnail.trending.small} mediumSrcImage={props.data.thumbnail.trending.medium} largeSrcImage={props.data.thumbnail.trending.large} />
                 <div className={styles.main_trending}>
-                    <div className={styles.bookmark_wrapper}> <BookMark /></div>
+                    <div className={styles.bookmark_wrapper}> <BookMark isBookmarked={props.data.isBookmarked} /></div>
                     <div className={styles.playbutton_wrapper}><PlayButton isHover={isHover} /></div>
                     <div className={styles.showdescription_wrapper}>
                         <ShowDescription isTrending={props.data.isTrending} yearOfRelease={props.data.year} category={props.data.category} rating={props.data.rating} title={props.data.title} />
@@ -43,7 +43,7 @@ function ShowTile(props) {
 
                 <ImageWrapper smallSrcImage={props.data.thumbnail.regular.small} mediumSrcImage={props.data.thumbnail.regular.medium} largeSrcImage={props.data.thumbnail.regular.large} />
                 <div className={styles.main_regular}>
-                    <div className={styles.bookmark_wrapper}> <BookMark /></div>
+                    <div className={styles.bookmark_wrapper}> <BookMark isBookmarked={props.data.isBookmarked} /></div>
                     <div className={styles.playbutton_wrapper}><PlayButton isHover={isHover} /></div>
 
                 </div>

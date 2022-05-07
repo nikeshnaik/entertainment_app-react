@@ -2,7 +2,18 @@
     width: 3.2rem;
     height: 3.2rem;
     border-radius: 50%;
-    background-color: rgba(var(--greyish-blue), 0.2);
+    background-color: rgba(var(--greyish-blue), 0.5);
     display: grid;
-    place-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.container:active {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.container:active>svg {
+    stroke: black;
+    stroke-width: 0.1rem;
+
 }

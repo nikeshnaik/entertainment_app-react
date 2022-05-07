@@ -23,6 +23,10 @@
     height: 2rem;
 }
 
+.icon:hover>svg>path {
+    fill: var(--red);
+}
+
 .active_category>svg>path {
     fill: white;
 }

@@ -8,32 +8,22 @@ import styles from "./navbar.module.css"
 import { useState } from 'react'
 import { setCurrentPage } from '../../features/globalState/globalStateSlice'
 import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 
 function Navbar() {
 
-
     const dispatch = useDispatch();
-
-    const [activeNavItem, setActiveNavItem] = useState([styles.active_category, '', '', ''])
-
-    const handleNavItemClick = (event, id) => {
-
-        let newState = new Array(3).fill('')
-        newState[id] = styles.active_category
-        setActiveNavItem(newState)
-        dispatch(setCurrentPage(id))
-
-    }
+    let activeClasses = `${styles.icon} ${styles.active_category}`
+    let inActiveClass = styles.icon
 
     return (
         <nav className={styles.container}>
             <Logo alt="logo" className={styles.logo} />
-            <button title="Home" className={`${styles.icon} ${activeNavItem[0]}`} onClick={(event) => handleNavItemClick(event, 0)}> <HomeIcon /> </button>
-            <button title="Movies" className={`${styles.icon} ${activeNavItem[1]}`} onClick={(event) => handleNavItemClick(event, 1)}> <MoviesIcon /> </button>
-            <button title="TvShows" className={`${styles.icon} ${activeNavItem[2]}`} onClick={(event) => handleNavItemClick(event, 2)}><TvSeriesIcon /> </button>
-            <button title="Bookmarks" className={`${styles.icon} ${activeNavItem[3]}`} onClick={(event) => handleNavItemClick(event, 3)}> <BookmarkIcon /> </button>
+            <NavLink to="/" className={({ isActive }) => (isActive ? activeClasses : inActiveClass)} onClick={() => dispatch(setCurrentPage(0))}>  <HomeIcon /> </NavLink>
+            <NavLink to="/movies" className={({ isActive }) => (isActive ? activeClasses : inActiveClass)} onClick={() => dispatch(setCurrentPage(1))}>  <MoviesIcon /> </NavLink>
+            <NavLink to="/tvseries" className={({ isActive }) => (isActive ? activeClasses : inActiveClass)} onClick={() => dispatch(setCurrentPage(2))}>  <TvSeriesIcon /> </NavLink>
+            <NavLink to="/bookmarks" className={({ isActive }) => (isActive ? activeClasses : inActiveClass)} onClick={() => dispatch(setCurrentPage(3))}>  <BookmarkIcon /> </NavLink>
         </nav >
     )
 }

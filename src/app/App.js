@@ -22,11 +22,17 @@ function App() {
 
     <Routes path="/">
 
-      <Route path="" element={<Home />} />
+      <Route path="" element={<Home subPage="Home" key={2} />} />
 
-      <Route path="login" element={<Login />} />
+      <Route path="login" element={<Login key={0} />} />
 
-      <Route path="signup" element={<SignUp />} />
+      <Route path="signup" element={<SignUp key={1} />} />
+
+      <Route path="movies" element={<Home subPage="Movie" key={3} />} />
+
+      <Route path="tvseries" element={<Home subPage="TV Series" key={4} />} />
+
+      <Route path="bookmarks" element={<Home subPage="Bookmark" key={5} />} />
 
       <Route path="*" element={
         <main style={{

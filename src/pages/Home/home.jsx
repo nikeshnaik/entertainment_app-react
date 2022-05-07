@@ -7,52 +7,16 @@ import SearchBox from '../../components/SearchBox/searchBox';
 import ShowTile from '../../components/ShowTile/showtile';
 import TrendingRow from '../../components/TrendingRow/trendingRow';
 import getShows from "../../services/shows";
+import { useDispatch, useSelector } from "react-redux";
+import { selectCurrentPage } from "../../features/globalState/globalStateSlice";
+import { isCompositeComponent } from "react-dom/test-utils";
 
 function Home(props) {
 
-    let showDetails = {
-
-        "title": "Beyond Earth",
-        "thumbnail": {
-            "trending": {
-                "small": "./assets/thumbnails/beyond-earth/trending/small.jpg",
-                "large": "./assets/thumbnails/beyond-earth/trending/large.jpg"
-            },
-            "regular": {
-                "small": "./assets/thumbnails/beyond-earth/regular/small.jpg",
-                "medium": "./assets/thumbnails/beyond-earth/regular/medium.jpg",
-                "large": "./assets/thumbnails/beyond-earth/regular/large.jpg"
-            }
-        },
-        "year": 2019,
-        "category": "Movie",
-        "rating": "PG",
-        "isBookmarked": false,
-        "isTrending": true
-    }
-
-    let showDetailsRegular = {
-
-        "title": "Beyond Earth",
-        "thumbnail": {
-            "trending": {
-                "small": "./assets/thumbnails/beyond-earth/trending/small.jpg",
-                "large": "./assets/thumbnails/beyond-earth/trending/large.jpg"
-            },
-            "regular": {
-                "small": "./assets/thumbnails/beyond-earth/regular/small.jpg",
-                "medium": "./assets/thumbnails/beyond-earth/regular/medium.jpg",
-                "large": "./assets/thumbnails/beyond-earth/regular/large.jpg"
-            }
-        },
-        "year": 2019,
-        "category": "Movie",
-        "rating": "PG",
-        "isBookmarked": false,
-        "isTrending": false
-    }
-
     const [trendingShows, setTrendingShows] = useState([])
+    const [gridShows, setGridShows] = useState([])
+
+    const currentPage = useSelector(selectCurrentPage)
 
 
     useEffect(() => {
@@ -62,52 +26,37 @@ function Home(props) {
                 return <ShowTile key={item.id} data={item} />
             })
 
-            setTrendingShows(newTrendingShows)
-            console.log("Called once")
+            let newGridShows = response.filter((item) => {
 
+                if (currentPage === 'Home' && !item.isTrending) return item
+
+                else if (item.category === currentPage && !item.isTrending) return item
+
+                else if (currentPage === "Bookmark" && item.isBookmarked) return item
+
+            }).map((item) => {
+
+                // setting flase will trigger regular icons
+                item.isTrending = false
+                return <ShowTile key={item.id} data={item} />
+
+            })
+
+            setTrendingShows(newTrendingShows)
+            setGridShows(newGridShows)
         })
 
-    }, [])
+    }, [currentPage])
 
     return (
 
-        // <>{props.children}</>
         <>
             <Navbar />
             <Layout>
                 <SearchBox />
-                <TrendingRow>
-                    {/* <ShowTile data={showDetails}></ShowTile>
-                    <ShowTile data={showDetails}></ShowTile>
-                    <ShowTile data={showDetails}></ShowTile>
-                    <ShowTile data={showDetails}></ShowTile>
-                    <ShowTile data={showDetails}></ShowTile> */}
-                    {trendingShows}
-                </TrendingRow>
-
+                {currentPage === "Home" ? <TrendingRow>{trendingShows}</TrendingRow> : console.log("currentPage", currentPage)}
                 <GridLayout>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
-                    <ShowTile data={showDetailsRegular}></ShowTile>
+                    {gridShows}
                 </GridLayout>
             </Layout >
         </>

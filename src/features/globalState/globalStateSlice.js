@@ -8,7 +8,7 @@ const initialState = {
         name: 'John Doe'
     },
     pageId: 0,
-    pageMapping: ['home', 'movies', 'tv shows', 'bookmarks'],
+    pageMapping: ['Home', 'Movie', 'TV Series', 'Bookmark'],
     searchText: 'Beyond Earth'
 }
 

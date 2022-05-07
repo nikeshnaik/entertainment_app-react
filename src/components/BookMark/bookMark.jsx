@@ -3,13 +3,12 @@ import { ReactComponent as BookMarkFullIcon } from "../../assets/icon-bookmark-f
 import { ReactComponent as BookMarkEmptyIcon } from "../../assets/icon-bookmark-empty.svg"
 
 
-function BookMark(isBookmarked) {
-
+function BookMark(props) {
 
     return (
 
         <div aria-label="bookmark" className={styles.container}>
-            {isBookmarked ? <BookMarkFullIcon /> : <BookMarkEmptyIcon />}
+            {props.isBookmarked ? <BookMarkFullIcon /> : <BookMarkEmptyIcon />}
         </div>
 
 
