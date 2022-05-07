@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-const initialState = {
+
+const initialState = localStorage.getItem("state") ? JSON.parse(localStorage.getItem("state")) : {
     login: false,
     user: {
         userName: 'john_doe',
@@ -21,18 +22,22 @@ const globalStateSlice = createSlice({
 
         setLogin: (state, action) => {
             state.login = action.payload
+            localStorage.setItem('state', JSON.stringify(state))
         },
 
         setUserInfo: (state, action) => {
             state.user = action.payload
+            localStorage.setItem('state', JSON.stringify(state))
         },
 
         setCurrentPage: (state, action) => {
             state.pageId = action.payload
+            localStorage.setItem('state', JSON.stringify(state))
         },
 
         setSearchTextFilter: (state, action) => {
             state.searchText = action.payload
+            localStorage.setItem('state', JSON.stringify(state))
         }
 
     }

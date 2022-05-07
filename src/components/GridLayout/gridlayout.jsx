@@ -5,7 +5,7 @@ function GridLayout(props) {
 
     return (
         <div className={styles.container}>
-            <span className={styles.title}>Recommended</span>
+            <span className={styles.title}>{props.section}</span>
             <div className={styles.gridContainer}>
                 {props.children}
             </div>

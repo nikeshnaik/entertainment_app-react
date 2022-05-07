@@ -4,12 +4,12 @@ import { selectCurrentPage, setSearchTextFilter } from "../../features/globalSta
 import { useDispatch, useSelector } from "react-redux";
 
 
-function SearchBox() {
+function SearchBox(props) {
 
-    const dispatch = useDispatch(setSearchTextFilter)
     const currentPage = useSelector(selectCurrentPage)
+    const dispatch = useDispatch()
 
-    let InputPlaceHolderPerPage = currentPage !== "home" ? `Search For ${currentPage}` : "Search For Movies, Tv Shows..."
+    let InputPlaceHolderPerPage = currentPage !== "Home" ? `Search For ${currentPage}` : "Search For Movies, Tv Shows..."
 
     const handleSearchBoxClick = (event) => {
         event.currentTarget.children[1].focus()
@@ -17,17 +17,11 @@ function SearchBox() {
         event.stopPropagation()
     }
 
-    const handleInputUpdate = (event) => {
-
-        dispatch(setSearchTextFilter(event.target.value))
-        event.stopPropagation()
-
-    }
 
     return (
         <div role="search" className={styles.container} onClick={handleSearchBoxClick} >
             <SearchIcon className={styles.search_icon} viewBox="0 0 32 32" />
-            <input title="Input" type="text" className={styles.inputbox} placeholder={InputPlaceHolderPerPage} onChange={handleInputUpdate} />
+            <input title="Input" type="text" className={styles.inputbox} placeholder={InputPlaceHolderPerPage} onChange={props.handleSearch} />
         </div >
     )
 }
