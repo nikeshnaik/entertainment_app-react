@@ -5,10 +5,9 @@ import { ReactComponent as BookmarkIcon } from '../../assets/icon-nav-bookmark.s
 import { ReactComponent as Logo } from '../../assets/logo.svg'
 
 import styles from "./navbar.module.css"
-import { useState } from 'react'
 import { setCurrentPage } from '../../features/globalState/globalStateSlice'
 import { useDispatch } from 'react-redux'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 function Navbar() {
@@ -24,7 +23,9 @@ function Navbar() {
             <NavLink to="/movies" className={({ isActive }) => (isActive ? activeClasses : inActiveClass)} onClick={() => dispatch(setCurrentPage(1))}>  <MoviesIcon /> </NavLink>
             <NavLink to="/tvseries" className={({ isActive }) => (isActive ? activeClasses : inActiveClass)} onClick={() => dispatch(setCurrentPage(2))}>  <TvSeriesIcon /> </NavLink>
             <NavLink to="/bookmarks" className={({ isActive }) => (isActive ? activeClasses : inActiveClass)} onClick={() => dispatch(setCurrentPage(3))}>  <BookmarkIcon /> </NavLink>
+            <img className={styles.profileBox} src="../../assets/image-avatar.png" alt="profile-pic" />
         </nav >
+
     )
 }
 

@@ -27,7 +27,20 @@
     line-height: 3.0rem;
     background-color: var(--dark-blue);
     outline: none;
-    border-bottom: 0.1rem solid var(--pure-white);
     caret-color: var(--red);
     text-transform: capitalize;
+}
+
+
+@media only screen and (max-width: 810px) {
+
+    .container {
+        width: 95vw;
+        height: inherit;
+    }
+
+    .inputbox {
+        width: 88vw;
+    }
+
 }

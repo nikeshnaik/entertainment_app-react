@@ -11,7 +11,7 @@ function ImageWrapper(props) {
 
 
     return (
-        <img src={props.smallSrcImage} alt="image" className={styles.imageContainer}
+        <img src={props.smallSrcImage} alt={props.smallSrcImage.split("/").pop(-1)} className={styles.imageContainer}
             srcSet={srcSetValue} />
     )
 }

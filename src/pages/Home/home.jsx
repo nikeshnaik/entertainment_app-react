@@ -1,4 +1,3 @@
-import styles from "./home.module.css"
 import React, { useEffect, useState } from 'react';
 import GridLayout from '../../components/GridLayout/gridlayout';
 import Layout from '../../components/Layout/layout';
@@ -38,6 +37,8 @@ function Home(props) {
 
                 else if (currentPage === "Bookmark" && item.isBookmarked) return item
 
+                return false
+
             }).map((item) => {
 
                 // setting flase will trigger regular icons
@@ -70,6 +71,7 @@ function Home(props) {
                 else if (score && currentPage === "Home") return item
                 else if (score && currentPage === "Bookmark" && item.isBookmarked) return item
 
+                return false
             }).map((item) => {
 
                 // setting flase will trigger regular icons

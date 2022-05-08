@@ -30,3 +30,59 @@
 .active_category>svg>path {
     fill: white;
 }
+
+.profileBox {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 2.4rem;
+    border: 0.1rem solid var(--pure-white);
+}
+
+.profileBox>img {
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+}
+
+
+
+@media only screen and (max-width: 810px) and (orientation: portrait) {
+
+    .container {
+        position: sticky;
+        width: 95vw;
+        height: 7.2rem;
+        margin: 2.4rem 2.4rem 0 2.4rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        column-gap: 3.2rem;
+    }
+
+    .logo {
+        margin: unset;
+        position: absolute;
+        left: 2.4rem;
+        transform: scale(0.8);
+    }
+
+    .profileBox {
+        position: absolute;
+        right: 2.4rem;
+        bottom: 1.6rem;
+    }
+
+    .icon {
+        transform: scale(0.8);
+    }
+
+}
+
+@media only screen and (max-height: 810px) and (orientation: landscape) {
+    .container {
+        position: fixed;
+    }
+}

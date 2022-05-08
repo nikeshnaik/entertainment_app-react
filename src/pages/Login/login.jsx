@@ -1,9 +1,8 @@
 import styles from "./login.module.css";
 import { ReactComponent as WebAppIcon } from '../../assets/logo.svg'
-import { useDispatch } from "react-redux";
-import { setUserInfo } from "../../features/globalState/globalStateSlice";
-import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 function Login(props) {
@@ -14,11 +13,6 @@ function Login(props) {
     const [passwordWarning, setPasswordWarning] = useState(false)
 
     const [emailWarning, setEmailWarning] = useState(false)
-
-    const navigate = useNavigate()
-
-    const dispatch = useDispatch(setUserInfo)
-
 
     const handleLogin = (event) => {
 

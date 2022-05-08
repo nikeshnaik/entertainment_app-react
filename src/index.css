@@ -27,3 +27,17 @@ html {
 body {
   background-color: var(--dark-blue);
 }
+
+
+@media only screen and (max-width: 810px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+
+@media only screen and (max-width: 375px) {
+  html {
+    font-size: 35%;
+  }
+}
