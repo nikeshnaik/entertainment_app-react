@@ -3,7 +3,7 @@
     height: 3.2rem;
     border-radius: 50%;
     background-color: rgba(var(--greyish-blue), 0.5);
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -15,5 +15,13 @@
 .container:active>svg {
     stroke: black;
     stroke-width: 0.1rem;
+
+}
+
+@media only screen and (max-width:810px) {
+
+    .container>svg {
+        transform: scale(0.8);
+    }
 
 }

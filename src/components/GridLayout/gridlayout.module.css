@@ -3,6 +3,7 @@
     flex-direction: column;
     margin-top: 4rem;
     width: 90vw;
+
 }
 
 .gridContainer {
@@ -21,4 +22,11 @@
     font-size: 3.2rem;
     line-height: 4rem;
     letter-spacing: -0.05rem;
+}
+
+
+@media only screen and (max-width:810px) {
+    .gridContainer {
+        width: 100vw;
+    }
 }
