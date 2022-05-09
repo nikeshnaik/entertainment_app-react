@@ -4,8 +4,8 @@ function TrendingRow(props) {
 
     return (
 
-        <div className={styles.container}>
-            <span className={styles.title}>Trending</span>
+        <div className={styles.container} tabIndex="0">
+            <h1 className={styles.title}>Trending</h1>
             <div className={styles.row_container}>
                 {props.children}
             </div>

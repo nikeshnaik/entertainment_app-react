@@ -55,7 +55,6 @@ function Home(props) {
 
 
 
-
     const handleSearch = (event) => {
 
         dispatch(setSearchTextFilter(event.target.value))
@@ -87,14 +86,12 @@ function Home(props) {
 
 
 
-
     const BookMarkSplitSection = (sectionName, category) => {
 
         return (<GridLayout section={`Bookmarked ${sectionName}`}>
             {gridShows.filter(x => x.props.data.category === category)}
         </GridLayout>)
     }
-
 
 
 
