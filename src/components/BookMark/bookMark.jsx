@@ -7,7 +7,7 @@ function BookMark(props) {
 
     return (
 
-        <div aria-label="bookmark" className={styles.container}>
+        <div role="bookmark" className={styles.container}>
             {props.isBookmarked ? <BookMarkFullIcon /> : <BookMarkEmptyIcon />}
         </div>
 

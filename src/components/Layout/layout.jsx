@@ -3,7 +3,7 @@ import styles from "./layout.module.css"
 function Layout(props) {
     return (
 
-        <div className={styles.container}>
+        <div role="main" className={styles.container}>
             {props.children}
         </div>
 

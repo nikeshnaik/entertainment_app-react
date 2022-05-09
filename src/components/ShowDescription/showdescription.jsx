@@ -11,16 +11,16 @@ function ShowDescription(props) {
     return (
         <div className={styles.container}>
             <div className={showDetailClassName}>
-                <span id={styles.year}>{props.yearOfRelease}</span>
-                <div id={styles.dot}></div>
+                <span className={styles.year}>{props.yearOfRelease}</span>
+                <div className={styles.dot}></div>
                 {categoryIcon}
                 <span>{props.category}</span>
-                <div id={styles.dot}></div>
-                <span id={styles.rating}>{props.rating}</span>
+                <div className={styles.dot}></div>
+                <span className={styles.rating}>{props.rating}</span>
             </div>
-            <span id={titleClass}>{props.title}</span>
+            <span className={titleClass}>{props.title}</span>
 
-        </div>
+        </div >
     )
 }
 

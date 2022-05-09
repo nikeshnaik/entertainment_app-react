@@ -5,7 +5,7 @@
     row-gap: 0.3rem;
 }
 
-#dot {
+.dot {
     width: 0.3rem;
     height: 0.3rem;
     border-radius: 50%;
@@ -50,7 +50,7 @@
 }
 
 
-#title_large {
+.title_large {
 
     font-family: 'Outfit';
     font-style: normal;
@@ -63,7 +63,7 @@
     color: var(--pure-white)
 }
 
-#title_small {
+.title_small {
 
     font-family: 'Outfit';
     font-style: normal;
