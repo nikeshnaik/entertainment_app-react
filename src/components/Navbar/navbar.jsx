@@ -18,11 +18,11 @@ function Navbar() {
 
     return (
         <nav className={styles.container}>
-            <Logo alt="logo" className={styles.logo} />
-            <NavLink aria-label='home' aria-labelledby='a' to="/" className={({ isActive }) => (isActive ? activeClasses : inActiveClass)} onClick={() => dispatch(setCurrentPage(0))}>  <HomeIcon /> </NavLink>
-            <NavLink aria-label='movies' aria-labelledby='a' to="/movies" className={({ isActive }) => (isActive ? activeClasses : inActiveClass)} onClick={() => dispatch(setCurrentPage(1))}>  <MoviesIcon /> </NavLink>
-            <NavLink aria-label='tvseries' aria-labelledby='a' to="/tvseries" className={({ isActive }) => (isActive ? activeClasses : inActiveClass)} onClick={() => dispatch(setCurrentPage(2))}>  <TvSeriesIcon /> </NavLink>
-            <NavLink aria-label='bookmarks' aria-labelledby='a' to="/bookmarks" className={({ isActive }) => (isActive ? activeClasses : inActiveClass)} onClick={() => dispatch(setCurrentPage(3))}>  <BookmarkIcon /> </NavLink>
+            <Logo className={styles.logo} />
+            <NavLink aria-label="go to Home" to="/" className={({ isActive }) => (isActive ? activeClasses : inActiveClass)} onClick={() => dispatch(setCurrentPage(0))}>  <HomeIcon /> </NavLink>
+            <NavLink aria-label="go to movies" to="/movies" className={({ isActive }) => (isActive ? activeClasses : inActiveClass)} onClick={() => dispatch(setCurrentPage(1))}>  <MoviesIcon /> </NavLink>
+            <NavLink aria-label="go to tvseries" to="/tvseries" className={({ isActive }) => (isActive ? activeClasses : inActiveClass)} onClick={() => dispatch(setCurrentPage(2))}>  <TvSeriesIcon /> </NavLink>
+            <NavLink aria-label="go to bookmarks" to="/bookmarks" className={({ isActive }) => (isActive ? activeClasses : inActiveClass)} onClick={() => dispatch(setCurrentPage(3))}>  <BookmarkIcon /> </NavLink>
             <img className={styles.profileBox} src="../../assets/image-avatar.png" alt="profile-pic" />
         </nav >
 
