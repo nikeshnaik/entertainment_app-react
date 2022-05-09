@@ -37,15 +37,10 @@ Users should be able to:
 - **Bonus**: Build this project as a full-stack application
 - **Bonus**: If you're building a full-stack app, we provide authentication screen (sign-up/login) designs if you'd like to create an auth flow
 
-<!-- ### Screenshot
+### Screenshot
 
-![](./screenshot.jpg)
+![Final](./docs/final_screenshot.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
 
 ## My process
 
@@ -57,9 +52,9 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- StoryBook
+- React Router
 - Redux
-- LucidSpark
+- LucidSpark, Draw.io
 - Obsidian
 
 ### Docs
@@ -68,56 +63,43 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - [HTML Components](./docs/HTML%20CSS.md)
 - ![Componet Layout](./docs/Entertainment_App_Components.svg)
 
-<!-- ### What I learned
+### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+React is really good library to build UI faster, I was able to complete it within 1 week with markup and state management in next week. So total 2 weeks to complete. The main issue I saw is as the codebase gets bigger and more features start to show up, the more libraries you need to install. Even with just 5 extra libraries over React, codebase starts looking bloated, even with good project structure.
 
-To see how you can add code snippets, see below:
+In future, 
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-``` -->
-<!-- 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+1. wiil be more deliberate to reduce this bloated codebase
+2. wanted to use Django inbetween as backend to do the a fullstack project but more time will be wasted in building a REST API which gives nothing but a json and login. so went with Firebase or any serverless service.
+3. The more and more documentation is done well before coding, lets say atleast 60% of `what to do` is decided, the project gets completed within a week. So will be doing some more hypothesis on how much time it takes overall with backend design to complete a project.
+4. Making mobile responsive site is pain and will always hate it even if you give me all logic.
+5. Will be using UI component libraries like Material UI or Ant to build UI. Anything thats help in building markup faster is good.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+1. Position relative and absolute and fixed and sticky, all were used. Fun to play around.
+2. Images with more pixels looks good on larger screen. SO using srcset is beneficial.
+3. Builidng Backend first and then frontend. Else the context switch can delay project.
+4. Client side routing is something needs to be planned from first.
+5. Top down planning but bottom up coding??
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- Figma
+- CSS tricks
+- FullStackOpen Course [https://fullstackopen.com/]
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Nikesh Naik](https://nikeshnaik.dev)
+- Frontend Mentor - [@nikeshnaik](https://www.frontendmentor.io/profile/nikeshnaik)
+- Twitter - [@nikeshinfinity](https://www.twitter.com/nikeshinfinity)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.** -->
+- React Router Documentation
+- FullStackOpen Course is fun
 
 
 
