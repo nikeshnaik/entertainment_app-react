@@ -21,7 +21,7 @@ function SearchBox(props) {
     return (
         <div role="search" className={styles.container} onClick={handleSearchBoxClick} >
             <SearchIcon className={styles.search_icon} viewBox="0 0 32 32" />
-            <input title="Input" type="search" className={styles.inputbox} placeholder={InputPlaceHolderPerPage} onChange={props.handleSearch} />
+            <input title="Input" type="text" aria-label="Search" className={styles.inputbox} placeholder={InputPlaceHolderPerPage} onChange={props.handleSearch} />
         </div >
     )
 }
