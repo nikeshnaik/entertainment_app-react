@@ -33,3 +33,56 @@
     transform: scale(0.9);
     transition: 0.1s;
 }
+
+
+@media only screen and (max-width:810px) {
+
+    .container {
+        transform: scale(0.8);
+    }
+
+    .container:hover {
+        background-color: rgba(var(--greyish-blue), 0.6);
+    }
+
+    .container:active {
+        transform: scale(0.7);
+        transition: 0.1s;
+    }
+
+}
+
+
+@media only screen and (max-width:410px) {
+
+    .container {
+        transform: scale(0.7);
+    }
+
+    .container:hover {
+        background-color: rgba(var(--greyish-blue), 0.6);
+    }
+
+    .container:active {
+        transform: scale(0.6);
+        transition: 0.1s;
+    }
+
+}
+
+@media only screen and (max-width:320px) {
+
+    .container {
+        transform: scale(0.6);
+    }
+
+    .container:hover {
+        background-color: rgba(var(--greyish-blue), 0.6);
+    }
+
+    .container:active {
+        transform: scale(0.5);
+        transition: 0.1s;
+    }
+
+}
