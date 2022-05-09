@@ -3,7 +3,7 @@
     flex-direction: column;
     margin-top: 4rem;
     width: 90vw;
-
+    transition: 0.5s;
 }
 
 .gridContainer {
@@ -11,6 +11,8 @@
     margin-bottom: 10rem;
     grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
     grid-row-gap: 9rem;
+    transform: scale(0);
+    animation: scaleUp 0.5s ease-in-out forwards;
 }
 
 .title {
@@ -24,6 +26,16 @@
     letter-spacing: -0.05rem;
 }
 
+@keyframes scaleUp {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 
 @media only screen and (max-width:810px) {
     .gridContainer {
