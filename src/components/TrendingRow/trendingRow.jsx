@@ -6,7 +6,7 @@ function TrendingRow(props) {
 
         <div className={styles.container}>
             <h1 className={styles.title}>Trending</h1>
-            <div className={styles.row_container} tabindex="0">
+            <div className={styles.row_container} tabIndex="0">
                 {props.children}
             </div>
         </div>
