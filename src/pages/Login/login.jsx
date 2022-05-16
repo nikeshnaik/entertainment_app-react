@@ -2,7 +2,7 @@ import styles from "./login.module.css";
 import { ReactComponent as WebAppIcon } from '../../assets/logo.svg'
 
 import { useState } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../services/firebase";
 import { useDispatch } from "react-redux";

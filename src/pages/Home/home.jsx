@@ -7,7 +7,7 @@ import ShowTile from '../../components/ShowTile/showtile';
 import TrendingRow from '../../components/TrendingRow/trendingRow';
 import getShows from "../../services/shows";
 import { useDispatch, useSelector } from "react-redux";
-import { isLogin, selectCurrentPage, selectSearchFilterText, setSearchTextFilter } from "../../features/globalState/globalStateSlice";
+import { selectCurrentPage, selectSearchFilterText, setSearchTextFilter } from "../../features/globalState/globalStateSlice";
 
 import { compareTwoStrings } from "string-similarity";
 
