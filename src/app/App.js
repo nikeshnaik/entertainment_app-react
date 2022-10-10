@@ -20,17 +20,17 @@ function App() {
 
       <Route path="signup" element={<SignUp key={1} />} />
 
-      <Route element={<RequireAuth />}>
+      {/* <Route element={<RequireAuth />}> */}
 
-        <Route path="" element={<Home subPage="Home" key={2} />} />
+      <Route path="" element={<Home subPage="Home" key={2} />} />
 
-        <Route path="movies" element={<Home subPage="Movie" key={3} />} />
+      <Route path="movies" element={<Home subPage="Movie" key={3} />} />
 
-        <Route path="tvseries" element={<Home subPage="TV Series" key={4} />} />
+      <Route path="tvseries" element={<Home subPage="TV Series" key={4} />} />
 
-        <Route path="bookmarks" element={<Home subPage="Bookmark" key={5} />} />
+      <Route path="bookmarks" element={<Home subPage="Bookmark" key={5} />} />
 
-      </Route>
+      {/* </Route> */}
 
       <Route path="*" element={
         <main style={{
